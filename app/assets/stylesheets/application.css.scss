@@ -1,0 +1,57 @@
+//navbar
+header#banner {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  #logo-main {
+    margin: 15px 20px;
+    width: 120px;
+  }
+  #navbar-primary.navbar-default {
+    background: transparent;
+    border: none;
+    float: right;
+    margin: 20px;
+    .navbar-nav {
+      width: 100%;
+      float: right;
+      > li {
+        display: inline-block;
+        float: none;
+        > a {
+          padding-left: 30px;
+          padding-right: 30px;
+          }
+      }
+    }
+  }
+}
+//navbar end
+section.background {
+  height: 100vh;
+      background-image: url(/Styrofoam.jpg);
+      background-size: 117%;
+      background-repeat: no-repeat;
+      background-position: -80px -61px, center
+}
+
+section.front_page {
+  text-align: center;
+  div.landing_text {
+    padding: 276px 20px;
+    height: 90vh;
+    line-height: 50px;
+    // text-shadow: -4px -3px 2px #31708f;
+    h3 {
+      font-size: 60px;
+    }
+  }
+}
+
+section.footer {
+  height: 200px;
+  background-image: url(/Gloss_Metal_on_Wall_psd1.jpg);
+  background-size: 615px;
+  background-repeat: no-repeat;
+  background-position: 50% -106px, center;
+}
