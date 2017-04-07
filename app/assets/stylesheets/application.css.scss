@@ -1,11 +1,11 @@
 //variables
 $white: #ffffff;
-
+$shadow_black: #000000;
 // globol style
 p,
 h4 {
   color: $white;
-  text-shadow: -3px 3px 3px #888888;
+  text-shadow: -3px 3px 3px $shadow_black;
 
 }
 //navbar
@@ -57,7 +57,7 @@ section.front_page {
       h2 {
         color: $white;
         font-weight: 600;
-        text-shadow: -3px 3px 3px #888888;
+        text-shadow: -3px 3px 3px $shadow_black;
         letter-spacing: 5px;
       }
       p {
