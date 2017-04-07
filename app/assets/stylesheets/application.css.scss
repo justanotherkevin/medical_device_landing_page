@@ -1,11 +1,11 @@
 //variables
 $white: #ffffff;
-
+$shadow_black: #000000;
 // globol style
 p,
 h4 {
   color: $white;
-  text-shadow: -3px 3px 3px #888888;
+  text-shadow: -3px 3px 3px $shadow_black;
 
 }
 //navbar
@@ -38,77 +38,76 @@ header#banner {
   }
 }
 //navbar end
-section.background {
+.background {
   height: 100vh;
-    background-image: url(/doctor_tools.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: -300px 0px, center;
+  background: #444 url(../doctor_tools.jpg) center center no-repeat fixed;
+  background-size: cover;
 }
 section.front_page {
   text-align: center;
-  div.landing_text {
-    position: relative;
-    top: 50%;
-    transform: translateY(-30%);
-    padding: 0 20px;
+
     .mission_statement {
-      width: 500px;
+      padding-top: 70px;
       h2 {
         color: $white;
         font-weight: 600;
-        text-shadow: -3px 3px 3px #888888;
+        text-shadow: -3px 3px 3px $shadow_black;
         letter-spacing: 5px;
       }
       p {
         font-size: 18px;
+        width: 540px;
+        margin: auto;
+      }
+      .button_wrapper {
+        padding-top: 100px;
       }
     }
-    .front_page_video {
-      float: right;
-      transform: translateY(-25%);
-      width: 480px;
-      border-radius: 20px;
+    .video_wrapper {
+      padding-top: 25px;
+      height: 400px;
+      .front_page_video {
+        border-radius: 20px;
+        padding: 20px 20px;
+
+      }
     }
-  }
-  .button_wrapper {
-    padding-left: 39%;
-    transform: translateY(-42px);
-  }
+    div.subscriptions_form_wrapper {
+      height: 44vh;
+      background-color: rgba(41, 37, 37, 0.94);
+      background-image: url(/MetaMockup2.jpg);
+      background-size: cover;
+      background-position: 0px -160px, center;
+      background-repeat: no-repeat;
+      .form-group {
+        height: 100%;
+        .nifty_form {
+          width: 100%;
+          letter-spacing: 3px;
+          margin: auto;
+          padding-top: 167px;
+          display: inline-flex;
+          text-align: center;
+          .form-control {
+            margin: 15px;
+          }
+          .btn {
+            height: 45px;
+            margin-top: 10px;
+          }
+          p {
+                padding: 0px 10px;
+          }
+        }
+      }
+    }
 }
 section.footer {
-  position: absolute;
+  // position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 1rem;
   background-color: rgba(51, 122, 183, 0.45);
   text-align: center;
-}
-
-div.subscriptions_form_wrapper {
-  height: 100vh;
-    background-color: rgba(41, 37, 37, 0.94);
-    background-image: url(/Styrofoam.jpg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    .form_shadow{
-      text-align: center;
-      position: relative;
-      top: 200px;
-      height: 200px;
-      width: 350px;
-      margin: auto;
-      border-radius: 25px;
-      color: white;
-      // transform: translateY 20px;
-      background-color: rgba(50, 50, 50, 0.60);
-      .nifty_form {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        display: inline-grid;
-      }
-    }
 }

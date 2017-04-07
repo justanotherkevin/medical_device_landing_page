@@ -1,7 +1,10 @@
 class SubscriptionsController < ApplicationController
-  def new
+  def index
     @subscription = Subscription.new
   end
+  # def new
+  #   @subscription = Subscription.new
+  # end
   def create
     @subscription = Subscription.new(subscripton_params)
     if @subscription.save
