@@ -1,6 +1,15 @@
+//variables
+$white: #ffffff;
+
+// globol style
+p,
+h4 {
+  color: $white;
+  text-shadow: -3px 3px 3px #888888;
+
+}
 //navbar
 header#banner {
-  display: inline-block;
   position: absolute;
   width: 100%;
   #logo-main {
@@ -21,6 +30,8 @@ header#banner {
         > a {
           padding-left: 30px;
           padding-right: 30px;
+          color: $white;
+          letter-spacing: 5px;
           }
       }
     }
@@ -29,29 +40,75 @@ header#banner {
 //navbar end
 section.background {
   height: 100vh;
-      background-image: url(/Styrofoam.jpg);
-      background-size: 117%;
-      background-repeat: no-repeat;
-      background-position: -80px -61px, center
+    background-image: url(/doctor_tools.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -300px 0px, center;
 }
-
 section.front_page {
   text-align: center;
   div.landing_text {
-    padding: 276px 20px;
-    height: 90vh;
-    line-height: 50px;
-    // text-shadow: -4px -3px 2px #31708f;
-    h3 {
-      font-size: 60px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-30%);
+    padding: 0 20px;
+    .mission_statement {
+      width: 500px;
+      h2 {
+        color: $white;
+        font-weight: 600;
+        text-shadow: -3px 3px 3px #888888;
+        letter-spacing: 5px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .front_page_video {
+      float: right;
+      transform: translateY(-25%);
+      width: 480px;
+      border-radius: 20px;
     }
   }
+  .button_wrapper {
+    padding-left: 39%;
+    transform: translateY(-42px);
+  }
+}
+section.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgba(51, 122, 183, 0.45);
+  text-align: center;
 }
 
-section.footer {
-  height: 200px;
-  background-image: url(/Gloss_Metal_on_Wall_psd1.jpg);
-  background-size: 615px;
-  background-repeat: no-repeat;
-  background-position: 50% -106px, center;
+div.subscriptions_form_wrapper {
+  height: 100vh;
+    background-color: rgba(41, 37, 37, 0.94);
+    background-image: url(/Styrofoam.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    .form_shadow{
+      text-align: center;
+      position: relative;
+      top: 200px;
+      height: 200px;
+      width: 350px;
+      margin: auto;
+      border-radius: 25px;
+      color: white;
+      // transform: translateY 20px;
+      background-color: rgba(50, 50, 50, 0.60);
+      .nifty_form {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-grid;
+      }
+    }
 }
