@@ -1,20 +1,27 @@
+@import "animation";
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Roboto|Ubuntu');
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Cormorant Garamond', serif;
 //variables
 $white: #ffffff;
 $shadow_black: #000000;
 // globol style
 p,
-h4 {
+h1,h2,h3,h4 {
   color: $white;
   text-shadow: -3px 3px 3px $shadow_black;
+  font-family: 'Roboto', sans-serif;
 
 }
 //navbar
 header#banner {
   position: absolute;
   width: 100%;
+  z-index: 10;
   #logo-main {
     margin: 15px 20px;
-    width: 120px;
+    width: 55px;
   }
   #navbar-primary.navbar-default {
     background: transparent;
@@ -38,16 +45,33 @@ header#banner {
   }
 }
 //navbar end
-.background {
-  height: 100vh;
-  background: #444 url(../doctor_tools.jpg) center center no-repeat fixed;
-  background-size: cover;
-}
 section.front_page {
   text-align: center;
 
+      .background {
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        display: block;
+        background: #444 url(../tubs.jpg) center center no-repeat fixed;
+        background-size: cover;
+        z-index: 1;
+        -webkit-filter: blur(3px) brightness(70%);
+        -moz-filter: blur(3px) brightness(70%);
+        -o-filter: blur(3px) brightness(70%);
+        -ms-filter: blur(3px) brightness(70%);
+        filter: blur(3px) brightness(70%);
+      }
+
     .mission_statement {
-      padding-top: 70px;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 25px;
       h2 {
         color: $white;
         font-weight: 600;
@@ -73,33 +97,24 @@ section.front_page {
       }
     }
     div.subscriptions_form_wrapper {
-      height: 44vh;
-      background-color: rgba(41, 37, 37, 0.94);
-      background-image: url(/MetaMockup2.jpg);
-      background-size: cover;
-      background-position: 0px -160px, center;
-      background-repeat: no-repeat;
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+      background-color: rgba(0,0,0,.5);
       .form-group {
-        height: 100%;
+        margin: 15px;
+
         .nifty_form {
-          width: 100%;
-          letter-spacing: 3px;
-          margin: auto;
-          padding-top: 167px;
           display: inline-flex;
-          text-align: center;
           .form-control {
-            margin: 15px;
-          }
-          .btn {
-            height: 45px;
-            margin-top: 10px;
-          }
-          p {
-                padding: 0px 10px;
+            width: 250px;
+            margin: 0px 20px;
           }
         }
       }
+
+
+
     }
 }
 section.footer {
