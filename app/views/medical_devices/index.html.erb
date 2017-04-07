@@ -1,10 +1,18 @@
+
 <section class="front_page background">
     <div class="landing_text">
-      <!-- <h3>Medical Device Market</h3> -->
-      <!-- <p>Staying Current With The Newest In Medical Device Technology Like Never Before</p> -->
-      <%= render 'layouts/subscribe' %>
-      <div class="buttons">
-        <a href="#hestia_features" class="btn btn-primary btn-lg">Subscribe</a>
+      <div class="row">
+
+        <div class="mission_statement col-sm-4">
+          <h2>Medical Device Market</h2>
+          <p>Staying Current With The Newest In Medical Device Technology Like Never Before</p>
+        </div>
+        <video class='front_page_video col-sm-4' controls>
+          <source src="some_video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="button_wrapper">
+        <%= link_to "Subscribe", new_subscription_path, class: "btn btn-primary btn-lg col-sm-4" %>
       </div>
     </div>
 </section>

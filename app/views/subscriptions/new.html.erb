@@ -1,0 +1,11 @@
+<div class="subscriptions_form_wrapper">
+  <div class=form_shadow>
+    <%= form_for @subscription, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+      First Name: <%= f.text_field :first_name, lable: "First Name" %>
+      Last Name: <%= f.text_field :last_name, lable: "Last Name" %>
+      Email: <%= f.text_field :email, lable: "Email" %>
+      <br>
+      <%= f.submit "Subscribe" %>
+    <% end %>
+  </div>
+</div>
