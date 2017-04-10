@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Courgette|Cantarell:400i|Ubuntu');
-
+// @import subscriptions.js;
 //variables
 $white: #ffffff;
 $black_transparent: rgba(51, 51, 51, 0.65);
@@ -9,28 +9,17 @@ $black: #000000;
 $gray: #676767;
 
 // globol style
-
 p,
-h1,h2,h3,h4 {
+h1, h2, h3, h4 {
   font-family: 'Ubuntu', sans-serif;
   color: $white;
-  text-shadow: -3px 3px 3px $black;
+  text-shadow: 0px 3px 5px $black;
 }
 input.btn.btn-primary {
-  font-family: 'Courgette', cursive;
+  font-family: 'Ubuntu', sans-serif;
   background-color: rgb(35, 80, 120);
 }
-//navbar
-header#banner {
-  position: absolute;
-  width: 100%;
-  z-index: 10;
-  #logo-main {
-    margin: 15px 20px;
-    width: 55px;
-  }
-}
-//navbar end
+
 section.first_panel {
   text-align: center;
   .background {
@@ -47,75 +36,90 @@ section.first_panel {
     -ms-filter: blur(3px) brightness(70%);
     filter: blur(3px) brightness(70%);
   }
-
   .mission_statement {
     height: 100vh;
-    width: 100%;
+    padding-top: 1px;
     position: relative;
-    z-index: 9999;
-    padding-top: 25px;
+    width: 100%;
+    z-index: 10;
     h1 {
-      font-family: 'Ubuntu', sans-serif;
       color: $white;
-      text-shadow: -3px 3px 3px $black;
+      font-family: 'Ubuntu', sans-serif;
       letter-spacing: 4px;
+      margin-top: 10px;
+      margin-bottom: 0px;
     }
     p {
       font-family: 'Ubuntu', sans-serif;
       font-size: 18px;
-      width: 100%;
       margin: auto;
+      width: 100%;
     }
     .video_wrapper {
-      padding: 25px 0px;
-      height: 80%;
+      height: 77%;
+      margin: 15px 34px;
+      box-shadow: 0 0 16px #fff8f8;
       #video_front_page {
-        border: 2px outset $black_transparent;
         border-radius: 4px;
-        width: 90%;
+        // border: 2px outset $black_transparent;
         height: 100%;
+        width: 100%;
       }
     }
   }
 }
+
 section.second_panel {
-  height: 300px;
-  text-align: center;
-  color: $white;
-  letter-spacing: 5px;
-  background: #444 url(../doctor_male.jpg) center center no-repeat fixed;
   background-position: 0px 125px;
   background-size: cover;
+  background: #444 url(../doctor_male.jpg) center center no-repeat fixed;
+  color: $white;
   font-weight: 600;
-  padding: 65px 68px;
+  height: 300px;
+  letter-spacing: 3px;
+  padding: 40px 90px;
+  text-align: center;
   div.dim_background {
     background: $black_transparent;
+    border-radius: 20px;
+    height: 100%;
   }
   div.sub_message {
     h2 {
       font-family: 'Ubuntu', sans-serif;
       font-size: 30px;
-      margin: 0;
       padding-top: 25px;
       padding-bottom: 20px;
+      margin: 0;
     }
   }
   div.subscriptions_form_wrapper {
     width: 100%;
     .nifty_form {
       width: 100%;
-      padding: 25px 20%;
-      display: inline-flex;
+      padding: 25px 14%;
+      // display: inline-flex;
       .form-control {
-        width: 70%;
-        margin: 0px auto;
-        background: $black_transparent;
-        font-family: 'Cantarell', sans-serif;
-        color: $gray;
-        border: 1px solid $black_transparent;
+        width: 40%;
+        margin: 0 4%;
+        background: rgba(51, 51, 51, 0.65);
+        font-family: 'Ubuntu', sans-serif;
+        color: #676767;
+        border: 1px solid rgba(51, 51, 51, 0.65);
+        display: inline-block;
+        float: left;
         &:focus {
           background-color: $focus_input;
         }
+      .btn {
+        display: inline-block;
+        float: left;
+      }
+      }
+      #subscription_email {
+        width: 60%;
+
+
       }
     }
   }
@@ -133,13 +137,61 @@ section.foorter_panel {
     margin: 0;
   }
 }
+.pop-up-button {
+  background: rgba(18, 129, 208, 0.97);
+  text-shadow: none;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: $white;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 1px solid $white;
+  cursor: pointer;
+  font-weight: bold;
+  &:hover{
+    background: #2f7090;
+  }
+}
+.pop-up {
+  height: auto;
+  width: 50%;
+  margin: 10vh auto;
+  background: $white;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #000;
+  z-index: 100;
+}
+
+span {
+  border-radius:3em;
+  margin-left:95%;
+  background:$black;
+  color:$white;
+  font-size:1.25em;
+  padding:.4em .7em;
+  cursor:pointer;
+}
+.pop-up-text {
+  box-sizing:border-box;
+  padding:20px;
+}
 // medica query
 @media screen and (max-width: 500px) {
   section.first_panel {
-
     .mission_statement {
-      .video_wrapper #video_front_page {
-        height: 70%;
+      h1 {
+        margin-top: 70px;
+      }
+      .video_wrapper {
+        height: auto;
+        margin: 55px 13px;
+        #video_front_page {
+          height: 235px;
+          margin: 0px 0px;
+        }
       }
     }
   }
@@ -150,6 +202,22 @@ section.foorter_panel {
       height: 250px;
       .sub_message {
         margin: 5px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 670px) {
+  section.first_panel {
+    .mission_statement {
+      h1 {
+        margin-top: 50px;
+      }
+      .video_wrapper {
+        height: auto;
+        margin: 51px 34px;
+        #video_front_page {
+          height: 336px;
+        }
       }
     }
   }

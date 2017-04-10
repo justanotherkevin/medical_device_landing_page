@@ -6,9 +6,8 @@
       <p>Staying Current With The Newest In Medical Device Technology Like Never Before </p>
 
       <div class="video_wrapper" data-lightbox="video-1">
-        <iframe id="video_front_page"  src="https://player.vimeo.com/video/125622502?autoplay=1&loop=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe id="video_front_page"  src="https://player.vimeo.com/video/208334095?autoplay=1&color=ffffff&title=0&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
-
     </div>
 </section>
 
@@ -20,13 +19,34 @@
         <p>Be the first to hear our news and special offers. Subscribe today. </p>
     </div>
 
-    <div class="subscriptions_form_wrapper" >
+    <p class="pop-up-button">Subscribe</p>
+    <div class="pop-up">
+      <span>x</span>
+      <div class="pop-up-text">
+        <!-- <h1>Heading 1</h1> -->
+        <!-- <p>Some sample pop-up text.</p> -->
+        <%= form_for @subscription, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+          <%= f.text_field :first_name, placeholder: "First Name", lable: "First name", class: "form-control" %>
+          <br>
+          <%= f.text_field :last_name, placeholder: "Last Name", lable: "Last Name", class: "form-control" %>
+          <br>
+          <%= f.email_field :email, placeholder: "Email", lable: "Email", class: "email_field form-control" %>
+          <br>
+          <%= f.submit "Subscribe", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- <div class="subscriptions_form_wrapper" >
       <%= form_for @subscription, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-        <%= f.email_field :email, placeholder: "Email", lable: "Email", class: "form-control text-muted" %>
+        <%= f.text_field :first_name, placeholder: "First Name", lable: "First name", class: "form-control" %>
+        <%= f.text_field :last_name, placeholder: "Last Name", lable: "Last Name", class: "form-control" %>
         <br>
+        <%= f.email_field :email, placeholder: "Email", lable: "Email", class: "email_field form-control" %>
+
         <%= f.submit "Subscribe", class: "btn btn-primary" %>
       <% end %>
-    </div>
+    </div> -->
 
   </div>
 </section>
