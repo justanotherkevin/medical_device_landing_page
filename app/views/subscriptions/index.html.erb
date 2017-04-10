@@ -1,0 +1,39 @@
+
+<section class="first_panel">
+    <div class="background"> </div>
+    <div class="mission_statement">
+      <h1><img src="raw2.png" id="logo" style="width:60px;margin-bottom:13px;margin-right:24px;">Medical Device Market </h1>
+      <p>Staying Current With The Newest In Medical Device Technology Like Never Before </p>
+
+      <div class="video_wrapper" data-lightbox="video-1">
+        <iframe id="video_front_page"  src="https://player.vimeo.com/video/125622502?autoplay=1&loop=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+
+    </div>
+</section>
+
+<section class="second_panel">
+  <div class="dim_background">
+
+    <div class="sub_message">
+        <h2>Subscribe for our Newsletter</h2>
+        <p>Be the first to hear our news and special offers. Subscribe today. </p>
+    </div>
+
+    <div class="subscriptions_form_wrapper" >
+      <%= form_for @subscription, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+        <%= f.email_field :email, placeholder: "Email", lable: "Email", class: "form-control text-muted" %>
+        <br>
+        <%= f.submit "Subscribe", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+
+  </div>
+</section>
+
+<section class="foorter_panel">
+  <footer>
+    <h1>Footer stuff </h1>
+    <p>Copy-rights ©2017</p>
+  </footer>
+</section>
