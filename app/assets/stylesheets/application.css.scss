@@ -58,10 +58,9 @@ section.first_panel {
     .video_wrapper {
       height: 77%;
       margin: 15px 34px;
-      box-shadow: 0 0 16px #fff8f8;
       #video_front_page {
         border-radius: 4px;
-        // border: 2px outset $black_transparent;
+        border: 5px outset rgba(102, 102, 102, 0.78);
         height: 100%;
         width: 100%;
       }
@@ -200,6 +199,7 @@ span {
     .dim_background {
       border-radius: 20px;
       height: 250px;
+      box-shadow: 0 0 10px 0px #333;
       .sub_message {
         margin: 5px;
       }

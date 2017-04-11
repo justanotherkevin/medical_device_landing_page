@@ -18,7 +18,7 @@ $(function() {
     $('.pop-up-container').hide(0);
     $('.pop-up').hide(0);
     $('.pop-up-button').show(0);
-    $('.first_panel').show(0);
+    $('.first_panel').slideDown(300);
     $('section.second_panel').css({'padding': '65px 68px', 'height': '300px'});
       $('section.second_panel div.dim_background').css({'background': 'rgba(51, 51, 51, 0.65)',
     'border-radius': '20px'});
