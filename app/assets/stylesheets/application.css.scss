@@ -36,32 +36,35 @@ section.first_panel {
     -ms-filter: blur(3px) brightness(70%);
     filter: blur(3px) brightness(70%);
   }
-  .mission_statement {
+  .mission_container {
     height: 100vh;
     padding-top: 1px;
     position: relative;
     width: 100%;
     z-index: 10;
-    h1 {
-      color: $white;
-      font-family: 'Ubuntu', sans-serif;
-      letter-spacing: 4px;
-      margin-top: 10px;
-      margin-bottom: 0px;
-    }
-    p {
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 18px;
-      margin: auto;
-      width: 100%;
+    .landing_message {
+      margin: 0 78px;
+      h1 {
+        color: $white;
+        font-family: 'Ubuntu', sans-serif;
+        letter-spacing: 4px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+      p {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 18px;
+        margin: auto;
+        width: 100%;
+      }
     }
     .video_wrapper {
       height: 77%;
-      margin: 15px 34px;
+      margin: 15px 75px;
       #video_front_page {
         border-radius: 4px;
         border: 5px outset rgba(102, 102, 102, 0.78);
-        height: 100%;
+        height: 90%;
         width: 100%;
       }
     }
@@ -70,17 +73,15 @@ section.first_panel {
 
 section.second_panel {
   background-position: 0px 125px;
-  background-size: cover;
-  background: #444 url(../doctor_male.jpg) center center no-repeat fixed;
+  background: url(../doctor_male.jpg) center center no-repeat;
   color: $white;
-  font-weight: 600;
+  font-weight: 500;
   height: 300px;
   letter-spacing: 3px;
   padding: 40px 90px;
   text-align: center;
   div.dim_background {
     background: $black_transparent;
-    border-radius: 20px;
     height: 100%;
     box-shadow: 0 0 5px #000000;
   }
@@ -98,7 +99,6 @@ section.second_panel {
     .nifty_form {
       width: 100%;
       padding: 25px 14%;
-      // display: inline-flex;
       .form-control {
         width: 40%;
         margin: 0 4%;
@@ -118,8 +118,6 @@ section.second_panel {
       }
       #subscription_email {
         width: 60%;
-
-
       }
     }
   }
@@ -164,7 +162,6 @@ section.foorter_panel {
   box-shadow: 0 0 20px #000;
   z-index: 100;
 }
-
 span {
   border-radius:3em;
   margin-left:95%;
@@ -181,18 +178,22 @@ span {
 // medica query
 @media screen and (max-width: 500px) {
   section.first_panel {
-    .mission_statement {
-      h1 {
-        margin-top: 70px;
+    .mission_container {
+      .landing_message {
+        margin: none;
+        h1 {
+          margin-top: 70px;
+        }
       }
       .video_wrapper {
         height: auto;
-        margin: 55px 13px;
+        margin: 50px 34px;
         #video_front_page {
           height: 235px;
           margin: 0px 0px;
         }
       }
+
     }
   }
   section.second_panel {
@@ -207,11 +208,13 @@ span {
     }
   }
 }
-@media screen and (max-width: 670px) {
+@media screen and (min-width: 501px) and (max-width: 700px)  {
   section.first_panel {
-    .mission_statement {
-      h1 {
-        margin-top: 50px;
+    .mission_container {
+      .landing_message {
+        h1 {
+          margin-top: 50px;
+        }
       }
       .video_wrapper {
         height: auto;
