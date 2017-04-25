@@ -1,21 +1,22 @@
 
-@import url('https://fonts.googleapis.com/css?family=Courgette|Cantarell:400i|Ubuntu');
+
 // @import subscriptions.js;
 //variables
 $white: #ffffff;
 $black_transparent: rgba(51, 51, 51, 0.65);
+$black_darker_transparent: rgba(0,0,0,0.7);
 $focus_input: rgba(70, 70, 70, 0.53);
 $black: #000000;
 $gray: #676767;
 $button_blue: rgba(18, 129, 208, 0.97);
 $button_hover: #2f7090;
+$font_palyfair: 'Playfair Display', serif;
+$font_crimson: "Crimson Text";
 
 // globol style
-p, h1, h2, h3, h4 {
-  font-family: 'Ubuntu', sans-serif;
-  color: $white;
-  text-shadow: 0px 3px 5px $black;
-}
+
+
+
 input.btn.btn-primary {
   font-family: 'Ubuntu', sans-serif;
   background-color: $button_blue;
@@ -23,6 +24,7 @@ input.btn.btn-primary {
 
 section.first_panel {
   text-align: center;
+  height: 100vh;
   .background {
     height: 100vh;
     position: absolute;
@@ -38,31 +40,33 @@ section.first_panel {
     filter: blur(3px) brightness(70%);
   }
   .mission_container {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     padding-top: 1px;
     position: relative;
-    width: 100%;
     z-index: 10;
     .landing_message {
-      margin: 0 78px
-      margin-bottom: 70px;
-      h1 {
+      margin: 0 78px;
+      margin-bottom: 50px;
+        h1 {
         color: $white;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: $font_palyfair;
         letter-spacing: 4px;
         margin-top: 10px;
         margin-bottom: 0px;
-      }
-      p {
-        font-family: 'Ubuntu', sans-serif;
+        }
+        p {
+        font-family: $font_crimson;
+        color: $white;
         font-size: 18px;
         margin: auto;
         width: 100%;
       }
     }
     .video_wrapper {
-      height: 77%;
-      margin: 15px 75px;
+      height: 65%;
+      width: 60%;
+      margin: 0 auto;
       #video_front_page {
         border-radius: 4px;
         border: 5px outset $gray;
@@ -72,75 +76,144 @@ section.first_panel {
     }
   }
 }
-
-section.second_panel {
-  background-position: 0px 125px;
-  background: url(../doctor_male.jpg) center center no-repeat;
-  color: $white;
-  font-weight: 500;
-  height: 300px;
-  letter-spacing: 3px;
-  padding: 40px 90px;
-  text-align: center;
-  div.dim_background {
-    background: $black_transparent;
-    height: 100%;
-    box-shadow: 0 0 5px $black;
-    border-radius: 15px;
-  }
-  div.sub_message {
-    h2 {
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 30px;
-      padding-top: 25px;
-      padding-bottom: 20px;
-      margin: 0;
-    }
-  }
-  div.subscriptions_form_wrapper {
-    width: 100%;
-    .nifty_form {
-      width: 100%;
-      padding: 25px 14%;
-      .form-control {
-        width: 40%;
-        margin: 0 4%;
-        background: $black_transparent;
-        font-family: 'Ubuntu', sans-serif;
-        color: $gray;
-        border: 1px solid $black_transparent;
-        display: inline-block;
-        float: left;
-        &:focus {
-          background-color: $focus_input;
-        }
-      .btn {
-        display: inline-block;
-        float: left;
-      }
-      }
-      #subscription_email {
-        width: 60%;
-      }
-    }
-  }
+.pop-up {
+  width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      /* left: 30%; */
+      /* margin: -50px 0 0 -100px; */
+      background: $black_darker_transparent;
 }
+.first_and_last_name {
+  display: inline-block;
+  width: 30%;
+  height: 33px;
+  padding: 6px 12px;
+  margin: 2%;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.email_field {
+  display: inline-block;
+      width: 64.5%;
+      height: 33px;
+      padding: 6px 12px;
+      margin-bottom: 2%;
+      font-size: 14px;
+      color: #555;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+      -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.btn {
+  display: inline-block;
+
+  margin: 0 5%;
+}
+.sub_popup{
+
+}
+.pop-up .form_wrapper {
+  margin: 14% 5%;
+}
+// .form-control {
+//   display: inline-block;
+//   width: 40%;
+//   margin: 0 4%;
+//   background: $black_transparent;
+//   font-family: 'Ubuntu', sans-serif;
+//   color: $gray;
+//   border: 1px solid $black_transparent;
+//   display: inline-block;
+//   float: left;
+//   &:focus {
+//     background-color: $focus_input;
+//   }
+
+// }
+// section.second_panel {
+//   background-position: 0px 125px;
+//   background: url(../doctor_male.jpg) center center no-repeat;
+//   color: $white;
+//   font-weight: 500;
+//   height: 300px;
+//   letter-spacing: 3px;
+//   padding: 40px 90px;
+//   text-align: center;
+//   div.dim_background {
+//     background: $black_transparent;
+//     height: 100%;
+//     box-shadow: 0 0 5px $black;
+//     border-radius: 15px;
+//   }
+  // div.sub_message {
+  //   h2 {
+  //     font-family: 'Ubuntu', sans-serif;
+  //     font-size: 30px;
+  //     padding-top: 25px;
+  //     padding-bottom: 20px;
+  //     margin: 0;
+  //   }
+  // }
+//   div.subscriptions_form_wrapper {
+//     width: 100%;
+//     .nifty_form {
+//       width: 100%;
+//       padding: 25px 14%;
+//       .form-control {
+//         display: inline-block;
+//         width: 45%;
+//         margin: 0 4%;
+//         background: $black_transparent;
+//         font-family: 'Ubuntu', sans-serif;
+//         color: $gray;
+//         border: 1px solid $black_transparent;
+//         display: inline-block;
+//         float: left;
+//         &:focus {
+//           background-color: $focus_input;
+//         }
+//       .btn {
+//         display: inline-block;
+//         float: left;
+//       }
+//       }
+//       #subscription_email {
+//         width: 60%;
+//       }
+//     }
+//   }
+// }
 
 section.foorter_panel {
   text-align: center;
   background-color: $white;
   h1 {
-    font-family: 'Ubuntu', sans-serif;
+    // font-family: 'Ubuntu', sans-serif;
     margin-top: 0;
   }
   p {
-    font-family: 'Ubuntu', sans-serif;
+    // font-family: 'Ubuntu', sans-serif;
     margin: 0;
   }
 }
 .pop-up-button {
   background: $button_blue;
-  text-shadow: none;
+  // text-shadow: none;
   width: 150px;
   height: 40px;
   line-height: 40px;
@@ -155,16 +228,7 @@ section.foorter_panel {
     background: $button_hover;
   }
 }
-.pop-up {
-  height: auto;
-  width: 50%;
-  margin: 10vh auto;
-  background: $white;
-  position: relative;
-  border-radius: 5px;
-  box-shadow: 0 0 20px $black;
-  z-index: 100;
-}
+
 span {
   border-radius: 3em;
   margin-left: 95%;
