@@ -44,7 +44,8 @@ section.first_panel {
     width: 100%;
     z-index: 10;
     .landing_message {
-      margin: 0 78px;
+      margin: 0 78px
+      margin-bottom: 70px;
       h1 {
         color: $white;
         font-family: 'Ubuntu', sans-serif;
@@ -85,6 +86,7 @@ section.second_panel {
     background: $black_transparent;
     height: 100%;
     box-shadow: 0 0 5px $black;
+    border-radius: 15px;
   }
   div.sub_message {
     h2 {
@@ -126,7 +128,7 @@ section.second_panel {
 
 section.foorter_panel {
   text-align: center;
-  background-color: $black_transparent;
+  background-color: $white;
   h1 {
     font-family: 'Ubuntu', sans-serif;
     margin-top: 0;
