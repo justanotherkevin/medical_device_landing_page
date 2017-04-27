@@ -1,0 +1,91 @@
+<section class="first_panel">
+    <div class="background"></div>
+    <div class="mission_container">
+
+        <div class="landing_message">
+            <h1><img src="raw2.png" id="logo" style="width:60px;margin-bottom:13px;margin-right:24px;">Medical Device Market
+            </h1>
+            <p>Staying Current With The Newest In Medical Device Technology Like Never Before
+            </p>
+        </div>
+
+        <div class="video_wrapper">
+            <iframe id="video_front_page" width="640" height="360" src="https://www.youtube.com/embed/aR5N2Jl8k14?version=3&enablejsapi=1rel=0&amp;controls=0&autoplay=1&amp;showinfo=0&amp;modestbranding=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="pop-up animated" id="sub-form">
+            <div class="form_wrapper">
+                <span onclick="hidePopup('sub-form')" class="glyphicon glyphicon-remove"></span>
+                <div class="intro">
+                    <h2 class="text-center">Subscribe for our Newsletter</h2>
+                    <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.
+                    </p>
+                </div>
+
+                <div class="pop-up-text">
+                    <%= form_for @subscription, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+                    <div class="">
+
+                        <%= f.text_field :first_name, placeholder: "First Name", lable: "First name", class: "first_and_last_name" %>
+
+                        <%= f.text_field :last_name, placeholder: "Last Name", lable: "Last Name", class: "first_and_last_name" %>
+                    </div>
+                    <div class="">
+                        <%= f.email_field :email, placeholder: "Email", lable: "Email", class: "email_field" %>
+
+                    </div>
+                    <div class="">
+                        <%= f.submit "Subscribe", class: "btn btn-primary" %>
+
+
+                    </div>
+                    <% end %>
+                </div>
+        </div>
+        </div>
+
+        <div class="sub_popup">
+            <button class="button"  onclick="showPopup('sub-form')">Subscribe</button>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- <section class="second_panel">
+    <div class="dim_background">
+
+        <div class="sub_message">
+            <h2>Subscribe for our Newsletter</h2>
+            <p>Be the first to hear our news and special offers. Subscribe today.
+            </p>
+        </div>
+
+        <p class="pop-up-button">Subscribe</p>
+        <div class="pop-up">
+            <span>x</span>
+            <div class="pop-up-text">
+
+                <%= form_for @subscription, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+                <%= f.text_field :first_name, placeholder: "First Name", lable: "First name", class: "form-control" %>
+                <br>
+                <%= f.text_field :last_name, placeholder: "Last Name", lable: "Last Name", class: "form-control" %>
+                <br>
+                <%= f.email_field :email, placeholder: "Email", lable: "Email", class: "email_field form-control" %>
+                <br>
+                <%= f.submit "Subscribe", class: "btn btn-primary" %>
+                <% end %>
+            </div>
+        </div>
+
+    </div>
+</section> -->
+
+<section class="foorter_panel">
+    <footer>
+        <h1>
+            add some Footer stuff
+        </h1>
+        <p>Copy-rights ©2017</p>
+    </footer>
+</section>
