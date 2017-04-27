@@ -26,11 +26,12 @@ $(function() {
 function showPopup(form_id) {
   var popup = document.getElementById(form_id);
   popup.style.display = 'block';
+  popup.className += " bounceInUp"
   // popup.fadeIn(400);
 
 }
 function hidePopup(form_id) {
   var popup = document.getElementById(form_id);
-   $('.pop-up').hide(40);
+   $('.pop-up').hide("slow");
 
 }

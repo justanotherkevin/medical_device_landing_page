@@ -13,9 +13,9 @@
             <iframe id="video_front_page" width="640" height="360" src="https://www.youtube.com/embed/aR5N2Jl8k14?version=3&enablejsapi=1rel=0&amp;controls=0&autoplay=1&amp;showinfo=0&amp;modestbranding=0" frameborder="0" allowfullscreen></iframe>
         </div>
 
-        <div class="pop-up" id="sub-form">
+        <div class="pop-up animated" id="sub-form">
             <div class="form_wrapper">
-
+                <span onclick="hidePopup('sub-form')" class="glyphicon glyphicon-remove"></span>
                 <div class="intro">
                     <h2 class="text-center">Subscribe for our Newsletter</h2>
                     <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.
@@ -37,7 +37,7 @@
                     <div class="">
                         <%= f.submit "Subscribe", class: "btn btn-primary" %>
 
-                        <button class="btn btn-primary" onclick="event.preventDefault(); hidePopup('pop-up')">Return</button>
+
                     </div>
                     <% end %>
                 </div>
@@ -45,7 +45,7 @@
         </div>
 
         <div class="sub_popup">
-            <button class="btn btn-primary" onclick="showPopup('sub-form')">Subscribe</button>
+            <button class="button"  onclick="showPopup('sub-form')">Subscribe</button>
 
         </div>
 
