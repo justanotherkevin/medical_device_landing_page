@@ -1,9 +1,0 @@
-<div class="subscriptions_form">
-  <%= form_for @subscription, url: {action: "subscriptions"}, html: {class: "nifty_form"} do |f| %>
-
-    <%= f.text_field :first_name, lable: "First Name" %>
-    <%= f.text_field :last_name, lable: "Last Name" %>
-    <%= f.text_field :email, lable: "Email" %>
-    <%= f.submit "Subscribe" %>
-  <% end %>
-</div>
