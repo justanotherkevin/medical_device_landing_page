@@ -1,91 +1,71 @@
-<section class="first_panel">
-    <div class="background"></div>
-    <div class="mission_container">
+<div class="navbar">
+    <span class="company_logo">LOGO </span>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">First Item</a></li>
+        <li><a href="#">Second Item</a></li>
+        <li><a href="#">Third Item</a></li>
+    </ul>
+</div>
 
-        <div class="landing_message">
-            <h1><img src="raw2.png" id="logo" style="width:60px;margin-bottom:13px;margin-right:24px;">Medical Device Market
-            </h1>
-            <p>Staying Current With The Newest In Medical Device Technology Like Never Before
-            </p>
-        </div>
-
-        <div class="video_wrapper">
-            <iframe id="video_front_page" width="640" height="360" src="https://www.youtube.com/embed/aR5N2Jl8k14?version=3&enablejsapi=1rel=0&amp;controls=0&autoplay=1&amp;showinfo=0&amp;modestbranding=0" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div class="pop-up animated" id="sub-form">
-            <div class="form_wrapper">
-                <span onclick="hidePopup('sub-form')" class="glyphicon glyphicon-remove"></span>
-                <div class="intro">
-                    <h2 class="text-center">Subscribe for our Newsletter</h2>
-                    <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.
-                    </p>
+<section class="section1">
+    <div class="flex_wrapper">
+        <div class="product_detils_wrapper">
+            <div class="product_detils">
+                <div>
+                    <h1>Product</h1>
+                    <p>Staying Current With The Newest In Medical Device Technology Like Never Before</p>
                 </div>
-
-                <div class="pop-up-text">
-                    <%= form_for @subscription, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-                    <div class="">
-
-                        <%= f.text_field :first_name, placeholder: "First Name", lable: "First name", class: "first_and_last_name" %>
-
-                        <%= f.text_field :last_name, placeholder: "Last Name", lable: "Last Name", class: "first_and_last_name" %>
-                    </div>
-                    <div class="">
-                        <%= f.email_field :email, placeholder: "Email", lable: "Email", class: "email_field" %>
-
-                    </div>
-                    <div class="">
-                        <%= f.submit "Subscribe", class: "btn btn-primary" %>
-
-
-                    </div>
-                    <% end %>
-                </div>
-        </div>
-        </div>
-
-        <div class="sub_popup">
-            <button class="button"  onclick="showPopup('sub-form')">Subscribe</button>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- <section class="second_panel">
-    <div class="dim_background">
-
-        <div class="sub_message">
-            <h2>Subscribe for our Newsletter</h2>
-            <p>Be the first to hear our news and special offers. Subscribe today.
-            </p>
-        </div>
-
-        <p class="pop-up-button">Subscribe</p>
-        <div class="pop-up">
-            <span>x</span>
-            <div class="pop-up-text">
-
-                <%= form_for @subscription, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-                <%= f.text_field :first_name, placeholder: "First Name", lable: "First name", class: "form-control" %>
-                <br>
-                <%= f.text_field :last_name, placeholder: "Last Name", lable: "Last Name", class: "form-control" %>
-                <br>
-                <%= f.email_field :email, placeholder: "Email", lable: "Email", class: "email_field form-control" %>
-                <br>
-                <%= f.submit "Subscribe", class: "btn btn-primary" %>
-                <% end %>
+                <p>Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.Nunc luctus in
+                    metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
+                <button class="btn btn-default" type="button" onclick="showPopup('sub-form')">Subscribe</button>
             </div>
         </div>
+        <div class="video_wrapper">
+                <iframe class=promo_video  src="https://www.youtube.com/embed/aR5N2Jl8k14?version=3&enablejsapi=1rel=0&amp;controls=0&autoplay=0&amp;showinfo=0&amp;modestbranding=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="pop_up_form animated" id="sub-form">
+        <div class="form_container">
+
+            <span onclick="hidePopup('sub-form')" class="glyphicon glyphicon-remove"></span>
+
+            <div class="intro">
+                <h2 class="text-center">Subscribe for our Newsletter</h2>
+                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.
+                </p>
+            </div>
+
+            <%= form_for @subscription, url: {action: "create"} do |f| %>
+                <div class="">
+                    <%= f.text_field :first_name, placeholder: "First Name", lable: "First name", class: "first_and_last_name" %>
+
+                    <%= f.text_field :last_name, placeholder: "Last Name", lable: "Last Name", class: "first_and_last_name" %>
+                </div>
+                <div class="">
+                    <%= f.email_field :email, placeholder: "Email", lable: "Email", class: "email_field" %>
+
+                </div>
+                <div class="">
+                    <%= f.submit "Subscribe", class: "btn btn-primary" %>
+
+                </div>
+            <% end %>
+        </div>
 
     </div>
-</section> -->
 
-<section class="foorter_panel">
-    <footer>
-        <h1>
-            add some Footer stuff
-        </h1>
-        <p>Copy-rights ©2017</p>
-    </footer>
+</section>
+
+<section class="footer_panel">
+    <img src="raw.png" alt="MDM">
+    <!-- <span class="footer_logo"> LOGO HERE </span> -->
+    <p>Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.Nunc luctus in metus eget fringilla. Aliquam sed justo ligula.</p>
+    <p>Copy-rights ©2017</p>
+    <div class="footer_input_wrapper">
+        <input type="text" name="" value="">
+        <button type="button" name="button">Button</button>
+    </div>
+    <div class="footer_social_media">
+
+    </div>
 </section>
