@@ -41,70 +41,95 @@ $border_radious: 10px;
   }
 }
 
-section.first_panel {
-  text-align: center;
-  height: 100vh;
-  .background {
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    background: $gray url(../tubs.jpg) center center no-repeat fixed;
-    background-size: cover;
-    -webkit-filter: blur(3px) brightness(70%);
-    -moz-filter: blur(3px) brightness(70%);
-    -o-filter: blur(3px) brightness(70%);
-    -ms-filter: blur(3px) brightness(70%);
-    filter: blur(3px) brightness(70%);
+// #########################
+div.navbar {
+  background-color: #00adef;
+  padding: 0 10%;
+  margin-bottom: 0px;
+  height: 10vh;
+  .company_logo {
+    display: inline-block;
   }
-  .mission_container {
-    height: 100%;
-    width: 100%;
-    padding-top: 1px;
-    position: relative;
-    z-index: 10;
-    .landing_message {
-      margin: 0 78px;
-      margin-bottom: 50px;
+  .nav-tabs {
+    display: inline-block;
+    float: right;
+  }
+}
+// #########################
+section.section1 {
+  width: 100%;
+  height: 90vh;
+  background-color: #00adef;
+  padding: 10% 10%;
+  color: white;
+  .flex_wrapper {
+    display: flex;
+    .product_detils_wrapper{
+      flex: 1;
+      height: 100%;
+      margin-right: 30px;
+      .product_detils {
+        margin:0 0;
         h1 {
-        color: $white;
-        font-family: $font_palyfair;
-        letter-spacing: 5px;
-        margin-top: 10px;
-        margin-bottom: 0px;
+          margin-top: 0px;
+          font-size: 110px;
         }
-        p {
-        font-family: $font_crimson;
-        color: $white_off;
-        font-size: 15px;
-        margin: auto;
-        width: 100%;
-        letter-spacing: 1px;
+        .btn {
+          margin: 0;
+        }
       }
     }
     .video_wrapper {
-      height: 65%;
-      width: 60%;
-      margin: 0 auto;
-      #video_front_page {
-        border-radius: 4px;
-        border: 5px outset $gray;
-        height: 90%;
-        width: 100%;
+      flex:1;
+      .promo_video {
+        width:100%;
+        height:360px;
       }
     }
   }
+  .pop_up_form {
+    color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $black_darker_transparent;
+    .form_container {
+      width: 700px;
+      height: 400px;
+      margin: 0 auto;
+      top: 25%;
+      position: relative;
+      color: black;
+      border-radius: 10px;
+      background-color: #eee;
+      border: 1px solid;
+      .intro {
+        padding: 64px 35px 0px 35px;
+      }
+      .new_subscription {
+        text-align: center;
+      }
+
+    }
+  }
 }
-.pop-up {
-  width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      /* left: 30%; */
-      /* margin: -50px 0 0 -100px; */
-      background: $black_darker_transparent;
+// #############################
+section.footer_panel {
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  img {
+    width: 200px;
+    height: 110px;
+  }
 }
+
+
+
+
 .first_and_last_name {
   display: inline-block;
   width: 30%;
@@ -188,109 +213,7 @@ section.first_panel {
   }
 }
 
-// .form-control {
-//   display: inline-block;
-//   width: 40%;
-//   margin: 0 4%;
-//   background: $black_transparent;
-//   font-family: 'Ubuntu', sans-serif;
-//   color: $gray;
-//   border: 1px solid $black_transparent;
-//   display: inline-block;
-//   float: left;
-//   &:focus {
-//     background-color: $focus_input;
-//   }
 
-// }
-// section.second_panel {
-//   background-position: 0px 125px;
-//   background: url(../doctor_male.jpg) center center no-repeat;
-//   color: $white;
-//   font-weight: 500;
-//   height: 300px;
-//   letter-spacing: 3px;
-//   padding: 40px 90px;
-//   text-align: center;
-//   div.dim_background {
-//     background: $black_transparent;
-//     height: 100%;
-//     box-shadow: 0 0 5px $black;
-//     border-radius: 15px;
-//   }
-  // div.sub_message {
-  //   h2 {
-  //     font-family: 'Ubuntu', sans-serif;
-  //     font-size: 30px;
-  //     padding-top: 25px;
-  //     padding-bottom: 20px;
-  //     margin: 0;
-  //   }
-  // }
-//   div.subscriptions_form_wrapper {
-//     width: 100%;
-//     .nifty_form {
-//       width: 100%;
-//       padding: 25px 14%;
-//       .form-control {
-//         display: inline-block;
-//         width: 45%;
-//         margin: 0 4%;
-//         background: $black_transparent;
-//         font-family: 'Ubuntu', sans-serif;
-//         color: $gray;
-//         border: 1px solid $black_transparent;
-//         display: inline-block;
-//         float: left;
-//         &:focus {
-//           background-color: $focus_input;
-//         }
-//       .btn {
-//         display: inline-block;
-//         float: left;
-//       }
-//       }
-//       #subscription_email {
-//         width: 60%;
-//       }
-//     }
-//   }
-// }
-
-section.foorter_panel {
-  text-align: center;
-  background-color: $white;
-  h1 {
-    // font-family: 'Ubuntu', sans-serif;
-    margin-top: 0;
-  }
-  p {
-    // font-family: 'Ubuntu', sans-serif;
-    margin: 0;
-  }
-}
-.pop-up-button {
-  background: $button_blue;
-  // text-shadow: none;
-  width: 150px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  color: $white;
-  margin: 20px auto;
-  border-radius: 10px;
-  border: 1px solid $white;
-  cursor: pointer;
-  font-weight: bold;
-  &:hover{
-    background: $button_hover;
-  }
-}
-
-.pop-up-text {
-  box-sizing: border-box;
-  padding-bottom: 30px;
-}
 
 // medica query
 @media screen and (max-width: 500px) {
