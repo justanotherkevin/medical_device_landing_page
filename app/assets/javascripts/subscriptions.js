@@ -1,7 +1,7 @@
 
 $(function() {
-  $('.pop-up').hide(0);
-  $('.pop-up-container').hide(0);
+  $('.pop_up_form').hide(0);
+
   //
   // $('.pop-up-button').click(function(){
   //   $('.pop-up-container').show(0);
@@ -32,6 +32,6 @@ function showPopup(form_id) {
 }
 function hidePopup(form_id) {
   var popup = document.getElementById(form_id);
-   $('.pop-up').hide("slow");
+   $('.pop_up_form').hide("slow");
 
 }
